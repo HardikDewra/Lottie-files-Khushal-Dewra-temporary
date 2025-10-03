@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Designs Come Alive with Motion!</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@rive-app/canvas@2.7.0"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">MotionHub</div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#use-cases">Use Cases</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn-nav-signin">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="section-tag">Animation Platform</span>
+                    <h1>Create animations<br>in mins, NOT hours!</h1>
+                    <p>Skip the complicated stuff. Just pick, customize, and ship beautiful animations. Works everywhere, zero coding needed.</p>
+                    <button class="btn-hero">Start Free Now</button>
+                    <div class="hero-badges">
+                        <span>No card needed</span>
+                        <span>100,000+ ready animations</span>
+                        <span>Start in 30 seconds</span>
+                    </div>
+                </div>
+                <div class="hero-animation">
+                    <div class="hero-rive-container">
+                        <canvas id="hero-rive-canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Showcase Grid -->
+    <section class="showcase-grid">
+        <div class="container">
+            <span class="section-tag">Library</span>
+            <h2>100,000+ animations<br>ready to use right now</h2>
+            <p class="section-subtitle">No design skills needed. Just grab what you need and drop it in your project.</p>
+            
+            <div class="grid">
+                <div class="card loading-card">
+                    <span class="badge badge-featured">Featured</span>
+                    <div class="card-placeholder">
+                        <dotlottie-player src="Loader animation.lottie" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-title">Loading Animation</span>
+                        <button class="btn-icon">❤️</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="badge badge-new">New</span>
+                    <div class="card-placeholder">
+                        <dotlottie-player src="Success.lottie" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-title">Success Check</span>
+                        <button class="btn-icon">❤️</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="badge badge-popular">Popular</span>
+                    <div class="card-placeholder" style="position: relative;">
+                        <dotlottie-player src="Confetti - Full Screen.lottie" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 48px; z-index: 10;">🥳</div>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-title">Celebration</span>
+                        <button class="btn-icon">❤️</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-placeholder">
+                        <dotlottie-player src="Error animation.lottie" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-title">Error Alert</span>
+                        <button class="btn-icon">❤️</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="badge badge-featured">Featured</span>
+                    <div class="card-placeholder">
+                        <dotlottie-player src="Cloud Loading.lottie" background="transparent" speed="1" style="width: 80%; height: 80%;" loop autoplay></dotlottie-player>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-title">Data Sync</span>
+                        <button class="btn-icon">❤️</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-placeholder">
+                        <dotlottie-player src="Notification Bell Ringing.lottie" background="transparent" speed="1" style="width: 80%; height: 100%;" loop autoplay></dotlottie-player>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-title">Notification</span>
+                        <button class="btn-icon">❤️</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="badge badge-new">New</span>
+                    <div class="card-placeholder">
+                        <dotlottie-player src="loading.lottie" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-title">Upload Progress</span>
+                        <button class="btn-icon">❤️</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <span class="badge badge-popular">Popular</span>
+                    <div class="card-placeholder">
+                        <dotlottie-player src="Day and Night Toggle.lottie" background="transparent" speed="1" style="width: 100%; height: 100%;" loop autoplay></dotlottie-player>
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-title">Menu Toggle</span>
+                        <button class="btn-icon">❤️</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Feature Section (Dark) -->
+    <section class="product-feature dark-section">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-content">
+                    <span class="section-tag">Create</span>
+                    <h2>Make it yours<br>in seconds</h2>
+                    <p>Change colors, adjust speed, tweak timing. Everything works in real-time. No waiting. No headaches.</p>
+                    
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">✨</div>
+                            <div>
+                                <h4>Build Fast</h4>
+                                <p>Start from 100k+ templates. Done in minutes.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🎨</div>
+                            <div>
+                                <h4>Zero Effort</h4>
+                                <p>Click to change. See it happen instantly.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">⚡</div>
+                            <div>
+                                <h4>Works Everywhere</h4>
+                                <p>One export. Every platform. Guaranteed.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary">Explore Tools</button>
+                </div>
+                <div class="split-visual">
+                    <div class="animation-placeholder product-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                                <rect x="10" y="10" width="80" height="80" rx="12" stroke="#008080" stroke-width="2" stroke-dasharray="4 4"/>
+                                <rect x="20" y="20" width="30" height="30" rx="4" stroke="#008080" stroke-width="1.5"/>
+                                <circle cx="70" cy="35" r="8" stroke="#008080" stroke-width="1.5"/>
+                                <line x1="20" y1="60" x2="80" y2="60" stroke="#008080" stroke-width="1.5"/>
+                                <line x1="20" y1="70" x2="65" y2="70" stroke="#008080" stroke-width="1.5"/>
+                                <line x1="20" y1="80" x2="75" y2="80" stroke="#008080" stroke-width="1.5"/>
+                            </svg>
+                            <span>Product Interface Mockup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow/Process Section -->
+    <section class="workflow-section">
+        <div class="container">
+            <span class="section-tag">Workflow</span>
+            <h2>From idea to live<br>in 6 simple steps</h2>
+            <p class="section-subtitle">No complicated process. Just follow the path and you're done.</p>
+
+            <div class="workflow-grid">
+                <div class="workflow-card">
+                    <div class="animation-placeholder workflow-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <rect x="8" y="8" width="34" height="34" rx="6" stroke="#00D4FF" stroke-width="2" stroke-dasharray="3 3"/>
+                            </svg>
+                            <span>Icon</span>
+                        </div>
+                    </div>
+                    <h3>Create in Adobe AE</h3>
+                    <p>Design your animations in After Effects and export directly to Lottie format</p>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="animation-placeholder workflow-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <circle cx="25" cy="25" r="17" stroke="#A78BFA" stroke-width="2" stroke-dasharray="3 3"/>
+                            </svg>
+                            <span>Icon</span>
+                        </div>
+                    </div>
+                    <h3>Upload & Organize</h3>
+                    <p>Store all your animations in one place with smart folders and tags</p>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="animation-placeholder workflow-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <polygon points="25,8 34,20 42,25 34,30 25,42 16,30 8,25 16,20" stroke="#10B981" stroke-width="2" stroke-dasharray="3 3"/>
+                            </svg>
+                            <span>Icon</span>
+                        </div>
+                    </div>
+                    <h3>Customize & Edit</h3>
+                    <p>Fine-tune colors, timing and properties without touching code</p>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="animation-placeholder workflow-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <rect x="10" y="10" width="30" height="30" stroke="#FF6B9D" stroke-width="2" stroke-dasharray="3 3"/>
+                            </svg>
+                            <span>Icon</span>
+                        </div>
+                    </div>
+                    <h3>Test & Preview</h3>
+                    <p>See how your animations look across different platforms instantly</p>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="animation-placeholder workflow-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <circle cx="25" cy="25" r="15" stroke="#F59E0B" stroke-width="2" stroke-dasharray="3 3"/>
+                            </svg>
+                            <span>Icon</span>
+                        </div>
+                    </div>
+                    <h3>Collaborate</h3>
+                    <p>Share with your team, get feedback and iterate in real-time</p>
+                </div>
+
+                <div class="workflow-card">
+                    <div class="animation-placeholder workflow-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <rect x="12" y="12" width="26" height="26" rx="4" stroke="#6C5CE7" stroke-width="2" stroke-dasharray="3 3"/>
+                            </svg>
+                            <span>Icon</span>
+                        </div>
+                    </div>
+                    <h3>Ship Everywhere</h3>
+                    <p>Export optimized animations for web, iOS, Android and more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical/Dashboard Section (Dark) -->
+    <section class="dashboard-section dark-section">
+        <div class="container">
+            <span class="section-tag">Industry Standard</span>
+            <h2>Lottie, the industry standard<br>for motion design</h2>
+            <p class="section-subtitle">Trusted by the world's leading companies and design teams</p>
+
+            <div class="dashboard-visual">
+                <div class="animation-placeholder dashboard-placeholder">
+                    <div class="placeholder-content">
+                            <svg width="120" height="80" viewBox="0 0 120 80" fill="none">
+                                <!-- Dashboard mockup -->
+                                <rect x="5" y="5" width="110" height="70" rx="8" stroke="#008080" stroke-width="1.5" stroke-dasharray="4 4"/>
+                                
+                                <!-- Sidebar -->
+                                <rect x="10" y="10" width="20" height="60" rx="4" fill="#1E1E2E" stroke="#008080" stroke-width="1"/>
+                                
+                                <!-- Charts -->
+                                <rect x="35" y="15" width="35" height="25" rx="4" stroke="#00D4D4" stroke-width="1.5"/>
+                                <path d="M40 35 L45 30 L50 32 L55 25 L60 28 L65 22" stroke="#00D4D4" stroke-width="1.5" stroke-linecap="round"/>
+                                
+                                <rect x="75" y="15" width="35" height="25" rx="4" stroke="#80D4D4" stroke-width="1.5"/>
+                                <circle cx="92.5" cy="27.5" r="8" stroke="#80D4D4" stroke-width="1.5"/>
+                                
+                                <!-- Stats -->
+                                <rect x="35" y="45" width="25" height="20" rx="4" stroke="#00B8B8" stroke-width="1.5"/>
+                                <text x="40" y="58" fill="#00B8B8" font-size="6">2.4K</text>
+                                
+                                <rect x="65" y="45" width="22" height="20" rx="4" stroke="#66CCCC" stroke-width="1.5"/>
+                                <text x="68" y="58" fill="#66CCCC" font-size="6">94%</text>
+                                
+                                <rect x="92" y="45" width="18" height="20" rx="4" stroke="#00A8A8" stroke-width="1.5"/>
+                                <text x="94" y="58" fill="#00A8A8" font-size="6">5x</text>
+                            </svg>
+                        <span>Analytics Dashboard</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>2M+</h3>
+                    <p>Animations created</p>
+                </div>
+                <div class="stat-card">
+                    <h3>500K+</h3>
+                    <p>Active developers</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5B+</h3>
+                    <p>Monthly views</p>
+                </div>
+                <div class="stat-card">
+                    <h3>99.9%</h3>
+                    <p>Uptime guarantee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Section -->
+    <section class="implementation-section">
+        <div class="container">
+            <span class="section-tag">Implementation</span>
+            <h2>Copy, paste,<br>done</h2>
+            <p class="section-subtitle">3 lines of code. Works on any platform. Takes 30 seconds.</p>
+
+            <div class="code-showcase">
+                <div class="code-example">
+                    <div class="code-header">
+                        <span class="code-tab active">React</span>
+                        <span class="code-tab">Vue</span>
+                        <span class="code-tab">Vanilla JS</span>
+                        <span class="code-tab">iOS</span>
+                        <span class="code-tab">Android</span>
+                    </div>
+                    <pre class="code-block"><code>&lt;script src="https://unpkg.com/@lottiefiles/lottie-player"&gt;&lt;/script&gt;
+
+&lt;lottie-player
+  src="animation.json"
+  background="transparent"
+  speed="1"
+  style="width: 300px; height: 300px"
+  loop
+  autoplay
+&gt;&lt;/lottie-player&gt;</code></pre>
+                </div>
+                <button class="btn-primary">View Documentation</button>
+            </div>
+
+            <!-- Floating animation icons -->
+            <div class="floating-icons">
+                <div class="floating-icon" style="top: 10%; left: 5%;">
+                    <div class="animation-placeholder mini-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <circle cx="15" cy="15" r="10" stroke="#00D4FF" stroke-width="2" stroke-dasharray="2 2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-icon" style="top: 20%; right: 8%;">
+                    <div class="animation-placeholder mini-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <rect x="7" y="7" width="16" height="16" stroke="#FF6B9D" stroke-width="2" stroke-dasharray="2 2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-icon" style="bottom: 15%; left: 10%;">
+                    <div class="animation-placeholder mini-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <polygon points="15,5 20,12 25,15 20,18 15,25 10,18 5,15 10,12" stroke="#FFD93D" stroke-width="2" stroke-dasharray="2 2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-icon" style="bottom: 25%; right: 12%;">
+                    <div class="animation-placeholder mini-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <circle cx="15" cy="15" r="8" stroke="#A78BFA" stroke-width="2" stroke-dasharray="2 2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-icon" style="top: 50%; right: 5%;">
+                    <div class="animation-placeholder mini-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                <rect x="8" y="8" width="14" height="14" rx="3" stroke="#10B981" stroke-width="2" stroke-dasharray="2 2"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creative Potential Section (Gradient) -->
+    <section class="creative-section gradient-bg">
+        <div class="container">
+            <span class="section-tag">AI-Powered</span>
+            <h2>Tell AI what you want.<br>Get it instantly.</h2>
+            <p class="section-subtitle">Type your idea. AI builds it. You're done in seconds.</p>
+
+            <div class="creative-showcase">
+                <div class="animation-placeholder creative-placeholder">
+                    <div class="placeholder-content">
+                            <svg width="140" height="100" viewBox="0 0 140 100" fill="none">
+                                <rect x="10" y="10" width="120" height="80" rx="12" stroke="#005252" stroke-width="2" stroke-dasharray="5 5"/>
+                                <circle cx="70" cy="50" r="25" stroke="#005252" stroke-width="2"/>
+                                <path d="M60 45 L65 50 L80 35" stroke="#005252" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        <span>AI-Generated Animation</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-dark">Try AI Free</button>
+        </div>
+    </section>
+
+    <!-- Collaboration/Community Section -->
+    <section class="community-section">
+        <div class="container">
+            <span class="section-tag">Community</span>
+            <h2>Design teams love<br>Lottie files</h2>
+            <p class="section-subtitle">Join thousands of creators sharing amazing animations every day</p>
+
+            <div class="community-grid">
+                <div class="community-card">
+                    <div class="animation-placeholder community-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <rect x="10" y="10" width="50" height="50" rx="8" stroke="#6C5CE7" stroke-width="2" stroke-dasharray="3 3"/>
+                            </svg>
+                            <span>User Animation</span>
+                        </div>
+                    </div>
+                    <div class="community-card-footer">
+                        <div class="user-info">
+                            <div class="user-avatar">JD</div>
+                            <span>John Designer</span>
+                        </div>
+                        <div class="card-stats">
+                            <span>❤️ 1.2K</span>
+                            <span>👁️ 12K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <div class="animation-placeholder community-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <circle cx="35" cy="35" r="25" stroke="#00D4FF" stroke-width="2" stroke-dasharray="3 3"/>
+                            </svg>
+                            <span>User Animation</span>
+                        </div>
+                    </div>
+                    <div class="community-card-footer">
+                        <div class="user-info">
+                            <div class="user-avatar">SM</div>
+                            <span>Sarah Motion</span>
+                        </div>
+                        <div class="card-stats">
+                            <span>❤️ 2.4K</span>
+                            <span>👁️ 24K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <div class="animation-placeholder community-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <polygon points="35,10 45,25 60,35 45,45 35,60 25,45 10,35 25,25" stroke="#FFD93D" stroke-width="2" stroke-dasharray="3 3"/>
+                            </svg>
+                            <span>User Animation</span>
+                        </div>
+                    </div>
+                    <div class="community-card-footer">
+                        <div class="user-info">
+                            <div class="user-avatar">AK</div>
+                            <span>Alex Kreative</span>
+                        </div>
+                        <div class="card-stats">
+                            <span>❤️ 890</span>
+                            <span>👁️ 8.9K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <div class="animation-placeholder community-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <rect x="15" y="15" width="40" height="40" stroke="#FF6B9D" stroke-width="2" stroke-dasharray="3 3"/>
+                            </svg>
+                            <span>User Animation</span>
+                        </div>
+                    </div>
+                    <div class="community-card-footer">
+                        <div class="user-info">
+                            <div class="user-avatar">MC</div>
+                            <span>Maria Creative</span>
+                        </div>
+                        <div class="card-stats">
+                            <span>❤️ 3.1K</span>
+                            <span>👁️ 31K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <div class="animation-placeholder community-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <circle cx="35" cy="35" r="20" stroke="#A78BFA" stroke-width="2" stroke-dasharray="3 3"/>
+                            </svg>
+                            <span>User Animation</span>
+                        </div>
+                    </div>
+                    <div class="community-card-footer">
+                        <div class="user-info">
+                            <div class="user-avatar">DP</div>
+                            <span>David Pixel</span>
+                        </div>
+                        <div class="card-stats">
+                            <span>❤️ 1.8K</span>
+                            <span>👁️ 18K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="community-card">
+                    <div class="animation-placeholder community-placeholder">
+                        <div class="placeholder-content">
+                            <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
+                                <rect x="12" y="12" width="46" height="46" rx="8" stroke="#10B981" stroke-width="2" stroke-dasharray="3 3"/>
+                            </svg>
+                            <span>User Animation</span>
+                        </div>
+                    </div>
+                    <div class="community-card-footer">
+                        <div class="user-info">
+                            <div class="user-avatar">LT</div>
+                            <span>Lisa Tech</span>
+                        </div>
+                        <div class="card-stats">
+                            <span>❤️ 2.2K</span>
+                            <span>👁️ 22K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn-primary">Explore Community</button>
+        </div>
+    </section>
+
+    <!-- Create, Collaborate and Ship Section -->
+    <section class="cta-section">
+        <div class="container">
+            <span class="section-tag">Get Started</span>
+            <h2>Start making better animations<br>today, not tomorrow</h2>
+            <p class="section-subtitle">500,000+ people already shipping faster. Join them.</p>
+            
+            <div class="cta-buttons">
+                <button class="btn-primary-large">Start Free Now</button>
+                <button class="btn-secondary-large">See Pricing</button>
+            </div>
+
+            <div class="trust-badges">
+                <span>No credit card needed</span>
+                <span>Free forever. Seriously</span>
+                <span>Cancel anytime. No questions</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">MotionHub</div>
+                    <p>The world's leading animation platform for designers and developers.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Integrations</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Free Animations</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Use Cases</a></li>
+                        <li><a href="#">API Reference</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get the latest animations and updates delivered to your inbox.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 MotionHub. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
