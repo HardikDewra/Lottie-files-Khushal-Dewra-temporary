@@ -210,7 +210,7 @@ async function loadRiveAnimation() {
 
         // First, load without state machine to discover available state machines
         const tempRive = new window.rive.Rive({
-            src: './hero_ui_animation.riv',
+            src: 'assets/rive/hero_ui_animation.riv',
             canvas: canvas,
             autoplay: false,
             onLoad: () => {
