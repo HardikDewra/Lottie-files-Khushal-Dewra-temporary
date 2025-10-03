@@ -184,8 +184,9 @@ window.addEventListener('load', () => {
 // Initialize Rive animation
 let riveInstance;
 
-// Rive file path - Using relative path for GitHub Pages compatibility
-const RIVE_FILE_PATH = './assets/rive/hero_ui_animation.riv';
+// Rive file path - Robust path that works both locally and on GitHub Pages
+// Using relative path without ./ prefix for better compatibility
+const RIVE_FILE_PATH = 'assets/rive/hero_ui_animation.riv';
 
 // Load Rive animation
 async function loadRiveAnimation() {
@@ -236,7 +237,8 @@ async function loadRiveAnimation() {
             onLoadError: (error) => {
                 console.error('❌ Error loading Rive animation:', error);
                 console.error('🔍 Attempted to load from:', RIVE_FILE_PATH);
-                console.error('🌐 Full URL would be:', window.location.origin + window.location.pathname.replace('index.html', '') + RIVE_FILE_PATH.replace('./', ''));
+                console.error('🌐 Current URL:', window.location.href);
+                console.error('💡 Full asset URL:', new URL(RIVE_FILE_PATH, window.location.href).href);
                 showPlaceholderFallback();
             }
         });
@@ -273,7 +275,8 @@ function loadWithStateMachine(stateMachineName) {
         onLoadError: (error) => {
             console.error('❌ Error loading Rive animation with state machine:', error);
             console.error('🔍 Attempted to load from:', RIVE_FILE_PATH);
-            console.error('🌐 Full URL would be:', window.location.origin + window.location.pathname.replace('index.html', '') + RIVE_FILE_PATH.replace('./', ''));
+            console.error('🌐 Current URL:', window.location.href);
+            console.error('💡 Full asset URL:', new URL(RIVE_FILE_PATH, window.location.href).href);
             showPlaceholderFallback();
         }
     };
