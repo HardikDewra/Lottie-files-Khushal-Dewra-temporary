@@ -184,6 +184,9 @@ window.addEventListener('load', () => {
 // Initialize Rive animation
 let riveInstance;
 
+// Rive file path - Using relative path for GitHub Pages compatibility
+const RIVE_FILE_PATH = './assets/rive/hero_ui_animation.riv';
+
 // Load Rive animation
 async function loadRiveAnimation() {
     try {
@@ -202,6 +205,7 @@ async function loadRiveAnimation() {
         }
 
         console.log('🎯 Starting Rive animation load...');
+        console.log('📂 Loading from:', RIVE_FILE_PATH);
 
         // Set canvas size to match container
         const container = canvas.parentElement;
@@ -210,7 +214,7 @@ async function loadRiveAnimation() {
 
         // First, load without state machine to discover available state machines
         const tempRive = new window.rive.Rive({
-            src: 'assets/rive/hero_ui_animation.riv',
+            src: RIVE_FILE_PATH,
             canvas: canvas,
             autoplay: false,
             onLoad: () => {
@@ -231,6 +235,8 @@ async function loadRiveAnimation() {
             },
             onLoadError: (error) => {
                 console.error('❌ Error loading Rive animation:', error);
+                console.error('🔍 Attempted to load from:', RIVE_FILE_PATH);
+                console.error('🌐 Full URL would be:', window.location.origin + window.location.pathname.replace('index.html', '') + RIVE_FILE_PATH.replace('./', ''));
                 showPlaceholderFallback();
             }
         });
@@ -250,7 +256,7 @@ function loadWithStateMachine(stateMachineName) {
     canvas.height = container.offsetHeight;
 
     const config = {
-        src: './hero_ui_animation.riv',
+        src: RIVE_FILE_PATH,
         canvas: canvas,
         autoplay: true,
         fit: window.rive.Fit.Contain,
@@ -265,7 +271,9 @@ function loadWithStateMachine(stateMachineName) {
             console.log('✅ Rive is now interactive and fills the height!');
         },
         onLoadError: (error) => {
-            console.error('❌ Error loading Rive animation:', error);
+            console.error('❌ Error loading Rive animation with state machine:', error);
+            console.error('🔍 Attempted to load from:', RIVE_FILE_PATH);
+            console.error('🌐 Full URL would be:', window.location.origin + window.location.pathname.replace('index.html', '') + RIVE_FILE_PATH.replace('./', ''));
             showPlaceholderFallback();
         }
     };
